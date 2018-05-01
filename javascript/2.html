@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			function myFunction()
+			{
+				x=document.getElementById("my");//找到元素
+				x.innerHTML="你看到的是这个！我已经发生变化了";//改变内容
+			}
+			function myFunction()
+			{
+				x=document.getElementById("dm");//找到元素
+				x.style.color="#00fff0";//改变内容
+			}
+		</script>
+		<title></title>
+	</head>
+	<body>
+		<h5 style="color:#00ff00;">你觉得我帅吗？</h5>
+		<button type="button" onclick="alert('就知道你最可爱了!')">点这里</button>
+	<p id="my">
+	javasc能改变html元素的内容。
+	</p>
+	<button type="button" onclick="myFunction()">点击这里</button>
+	
+	<script>
+		function changeImage()
+		{
+			element=document.getElementById('myimage')
+			if (element.src.match("bulbon"))
+			{
+				element.src="en/25.jpg";
+			}
+			else{
+				element.src="en/26.jpg";
+			}
+		}
+	</script>
+	<img id="myimage" onclick="changeImage()" src="en/27.jpg">
+	<br>
+	<p id="dm">
+	javasc能改变html元素的内容。
+	</p>
+	<button type="button" onclick="myFunction()">点一下</button>
+	<br>
+	<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+	<input id="demo" type="text">
+	<script>
+		function myFunction()
+		{
+			var x=document.getElementById("demo").value;
+			if(x==""||isNaN(x))
+			{
+				alert("出现错误！");
+			}
+		}
+	</script>
+	<button type="button" onclick="myFunction()">点击这里</button>
+	
+	
+	
+
+
+<h1>My First Web </h1>
+
+<script>
+document.write("<p>My First JavaScript</p>");
+</script>
+
+
+
+	</body>
+</html>

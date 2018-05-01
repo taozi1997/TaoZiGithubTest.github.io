@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+				function myFunction(x)
+				{
+					x.style.background="yellow";
+				}
+				function mymessage(){
+					alert("这段消息由 onload 事件触发");
+				}
+				function lighton()
+				{
+					document.getElementById('myimage').src="en/26.jpg";
+				}
+				function lightoff()
+				{
+					document.getElementById('myimage').src="en/27.jpg";
+				}
+			</script>
+	</head>
+	<body onload="mymessage()" style="background-color: burlywood;">
+		
+		请输入英文字符：<input type="text" onfocus="myFunction(this)" />
+			<p>当输入字段获得焦点时，会触发改变背景颜色的函数。</p>
+			<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="en/27.jpg">
+			<p>按住鼠标不放！</p>
+			<h2 onmouseover="style.color='yellow'" onmouseout="style.color='red'">信不信我给你点颜色看看</h2>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var x;
+			document.write("<p>只有17位:");
+			 x=1234567890;
+			 document.write(x+"</p>");
+			 document.write("<p>0.2+0.1=");
+			 x=0.2+0.1;
+			 document.write(x+"</p>");
+			
+			document.write("<p>可分别乘以10并除以10：");
+			x=(0.2*10+0.1*10)/10;
+			document.write(x +"<p>");
+			
+		</script>
+		<script type="text/javascript">
+			var txt="HeLlo world hello Monday!"
+			document.write(txt.length)
+		</script>
+		<script type="text/javascript">
+			var txt="hello world!"
+			document.write("<p>Big:"+txt.big() +"</p>")
+			document.write("<p>Small:"+txt.small() +"</p>")
+			document.write("<p>Italics:" + txt.italics() +"</p>")
+			document.write("<p>Blink:" + txt.blink() + "</p>")
+			document.write("<p>Fixed: " + txt.fixed() + "</p>")
+document.write("<p>Strike: " + txt.strike() + "</p>")
+
+document.write("<p>Fontcolor: " + txt.fontcolor("Red") + "</p>")
+document.write("<p>Fontsize: " + txt.fontsize(16) + "</p>")
+
+document.write("<p>Lowercase: " + txt.toLowerCase() + "</p>")
+document.write("<p>Uppercase: " + txt.toUpperCase() + "</p>")
+
+document.write("<p>Subscript: " + txt.sub() + "</p>")
+document.write("<p>Superscript: " + txt.sup() + "</p>")
+
+document.write("<p>Link: " + txt.link("http://baidu.com") + "</p>")
+		</script>
+		<script type="text/javascript">
+
+var str="Visit Microsoft!"
+document.write(str.replace(/Microsoft/,"W3School"))
+
+</script>
+<script type="text/javascript">
+	var d=new Date();
+	document.write("从1997/01/17至今已过去"+d.getTime() + "毫秒");
+</script>
+<br />
+<script type="text/javascript">
+	var d=new Date()
+	var weekday=new Array(7)
+	weekday[0]="星期日"
+	weekday[1]="星期一"
+	weekday[2]="星期二"
+	weekday[3]="星期三"
+	weekday[4]="星期四"
+	weekday[5]="星期五"
+	weekday[6]="星期六"
+	
+	document.write("今天是"+weekday[d.getDay()])
+</script>
+<br />
+<script type="text/javascript">
+	function startTime()
+	{
+		var today=new Date()
+		var h=today.getHours()
+		var m=today.getMinutes()
+		var s=today.getSeconds()
+		//add a zero in front of number<10
+		m=checkTime(m)
+		s=checkTime(s)
+		document.getElementById('txt').innerHTML=h+":"+m+":"+s
+		t=setTimeout('startTime()',500)
+	}
+	function checkTime(i)
+	{
+		if (i<10)
+		{	i="0"+i}
+		return i
+	}
+</script>
+	</body>
+</html>

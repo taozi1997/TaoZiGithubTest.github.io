@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+	function myFunctionx()
+	{
+		try
+	{
+		var x=document.getElementById("wz").vaule;
+		if(x=="")   throw"值为空";
+		if(isNaN(x))  throw"不是数字";
+		if(x>10)    throw"太大";
+		if(x<5)    throw"太小";
+	}
+	catch(err)
+	{
+		var y=document.getElementById("mess");
+		y.innerHTML="错误：" + err +"。";
+	}
+	}
+</script>
+
+	</head>
+	<body>
+		<h1><p>请输入5和10之间的数字：</p></h1>
+<input id="wz" type="text">
+<button type="button" onclick="myFunctionx()">测试输入值</button>
+<p id="mess"></p>
+<br />
+<script type="text/javascript">
+
+function validate_required(field,alerttxt)
+{
+with (field)
+  {
+  if (value==null||value=="")
+    {alert(alerttxt);return false}
+  else {return true}
+  }
+}
+
+function validate_form(thisform)
+{
+with (thisform)
+  {
+  if (validate_required(email,"Email must be filled out!")==false)
+    {email.focus();return false}
+  }
+}
+</script>
+<p>点击下面的按钮，循环遍历对象 "person" 的属性。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x;
+var txt="";
+var person={fname:"Bill",lname:"Gates",age:56}; 
+
+for (x in person)
+{
+txt=txt + person[x];
+}
+
+document.getElementById("demo").innerHTML=txt;
+}
+</script>
+<br />
+<script>
+var txt="";
+function message()
+{
+try
+  {
+  adddlert("Welcome guest!");
+  }
+catch(err)
+  {
+  txt="本页有一个错误。\n\n";
+  txt+="错误描述：" + err.message + "\n\n";
+  txt+="点击确定继续。\n\n";
+  alert(txt);
+  }
+}
+</script>
+<input type="button" value="查看消息" onclick="message()" />
+	</body>
+</html>

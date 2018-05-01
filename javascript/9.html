@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="color: darkcyan; background-color: thistle;">
+		<p>点击这里来创建变量，并显示结果。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+function myFunction(){
+	
+var y=5;
+var x=y+4;
+var demop=document.getElementById("demo")
+demop.innerHTML="x="+x;
+}
+</script>
+<p>创建javasc对象</p>
+	<script>
+	person=new Object();
+	person.firstname="Tao";
+	person.lastname="Jie";
+	person.age=20;
+	person.eyecolor="bule";
+	document.write( person.color + person.firstname  + "is" + person.age  + "years old." );
+</script>
+<br />
+<script>
+function myFunction()
+{
+alert("猜到是我吗!");
+}
+</script>
+<button onclick="myFunction()">点击这里</button>
+<br />
+<p>点击这个按钮，来调用带参数的函数。</p>
+
+<button onclick="myFunction('Taojie','CEO')">点击这里</button>
+
+<script>
+function myFunction(name,job)
+{
+alert("Welcome " + name + ", the " + job);
+}
+</script>
+<p style="color: darkmagenta;">*调用带参数 的函数</p>
+<p style="color: aquamarine;">请点击其中的一个按钮，来调用带参数的函数。</p>
+
+<button onclick="myFunction('郑进光','软件工程师')">点击这里</button>
+<button onclick="myFunction('汤声梁','后端工程师')">点击这里</button>
+
+<script>
+function myFunction(name,job)
+{
+alert("Welcome " + name + ", the " + job);
+}
+</script>
+	</body>
+</html>
